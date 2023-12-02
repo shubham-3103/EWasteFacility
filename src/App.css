@@ -10,13 +10,85 @@
 .card-content{
   
 } */
+body{
+  background-color: #282b52;
+}
+
+.full-form {
+  align-items: center;
+  background-color: #15172b;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: #282b52;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 500px;
+  /* width: 320px; */
+}
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 4px 20px 0;
+}
+input{
+  position: relative ;
+  top: 10%;
+  border: 0 solid white;
+  outline: none;
+}
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.ic1 {
+  margin-top: 40px;
+}
+.ic2 {
+  margin-top: 30px;
+}
+.submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+
 .card-view{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  /* justify-content: space-around; */
   /* height: auto;
   max-height: 250px;
   width: auto;
   max-width: 250px; */
+  padding: 2%;
 }
 .card-view img{
   height: auto;

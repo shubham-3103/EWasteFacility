@@ -86,7 +86,6 @@ function Dashboard() {
 
   return (
     <>
-      <h1>Data in Card View</h1>
       <div className='card-view'>
         {data.map((item, index) => (
           <Card key={item._id}>

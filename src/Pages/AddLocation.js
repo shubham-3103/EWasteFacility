@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import axios from 'axios';
 import  Navbar  from '../Components/Navbar';
+import '../App.css'
 
 const AddLocation = () => {
     const [formData, setFormData] = useState({
@@ -33,39 +34,44 @@ const AddLocation = () => {
   return (
     <>
     <Navbar />
-    <div>
-      <h2>Add Location</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Latitude:</label>
-          <input
-            type="number"
-            name="latitude"
-            value={formData.latitude}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Longitude:</label>
-          <input
-            type="number"
-            name="longitude"
-            value={formData.longitude}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Add Location</button>
-      </form>
-    </div>
+    <div className='full-form'>
+      <div class="form">
+        <h1 class="subtitle">Add Location</h1>
+        <form onSubmit={handleSubmit}>
+          <div class="input-container ic1">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Place Name"
+            />
+          </div>
+
+          <div class="input-container ic2">
+            <input
+              type="number"
+              name="latitude"
+              value={formData.latitude}
+              onChange={handleChange}
+              placeholder="Latitude"
+            />
+          </div>
+
+          <div class="input-container ic2">
+            <input
+              type="number"
+              name="longitude"
+              value={formData.longitude}
+              onChange={handleChange}
+              placeholder="Longitude"
+            />
+          </div>
+
+          <button type="submit" class="submit">Add Location</button>
+        </form>
+      </div>
+      </div>
     </>
   )
 };
