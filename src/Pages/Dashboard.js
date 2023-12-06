@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import axios from 'axios';
 import '../App.css';
 
+
 import Cables from '../Images/Cables.jpg';
 import Charger from '../Images/Charger';
 import Computer from '../Images/Desktop Computer.jpg';
@@ -23,11 +24,13 @@ import Tablets from '../Images/Tablets.avif';
 import Machine from '../Images/Washing Machine.webp';
 
 function Dashboard() {
+  
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
   const [isDeletePopUpOpen,setIsDeletePopUpOpen] = useState(false);
   const [data, setData] = useState([]);
   const [itemData, setItemData] = useState([]);
-
+  
+  
   const openPopUp = () => {
     setIsPopUpOpen(true);
   };

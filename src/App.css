@@ -10,6 +10,15 @@
 .card-content{
   
 } */
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+/* .userName{
+  padding-right: 1%;
+} */
 body{
   background-color: #282b52;
 }

@@ -1,11 +1,13 @@
 import React,{ useState, useEffect } from 'react';
 import { useUser } from "@clerk/clerk-react";
 import { useNavigate } from 'react-router-dom';
+import { UserButton } from "@clerk/clerk-react";
 import '../App.css';
 
 function Navbar() {
   const { user } = useUser();
   const navigate = useNavigate();
+
   
   const userNameContent = user?.fullName;
 
@@ -30,6 +32,15 @@ return (
               </li>
             </ul>
           </div>
+          <div className='userName'>{userNameContent}</div>
+            {!user ? (
+              <div className="nav-item">
+                <button
+                  // className="nav-link btn btn-primary"
+                  onClick={() => navigate('/sign-in')} className="h-4 w-4 text-black ml-2" size="sm" variant="premium"> Sign In
+                      </button>
+                    </div>
+                  ) :<UserButton />}
           </div>
         </nav>
       </div>
